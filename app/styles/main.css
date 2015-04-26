@@ -1,120 +1,118 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 /* Space out content a bit */
-body {
-}
-
+body { color: #535353; }
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-}
-
+.header, .footer { padding-left: 15px; padding-right: 15px; }
 /* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
+.header h3 { margin-top: 0; margin-bottom: 0; line-height: 40px; padding-bottom: 19px; }
 /* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
+.footer { padding-top: 19px; color: #777; border-top: 1px solid #e5e5e5; }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 1000px;
-  }
-  .navbar-toggle { display: none}
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-
-/* dropdown menu 재정의 */
-  .navbar-collapse.collapse { display: block !important;}
-  .navbar-default .navbar-nav > li > a {color:#000; font-size: 22px;}
-  .navbar-default .navbar-nav > .open > a , .navbar-default .navbar-nav > .open > a:hover,
-  .navbar-default .navbar-nav > .open > a:focus { font-weight: bold; color:red; background-color: transparent;}
-  .dropdown-menu { position: fixed; top:100%;min-width: 100%}
-  .dropdown-menu li { float: left;}
-  .dropdown-menu {
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);}
-
+    .container { max-width: 1000px; }
+    .navbar-toggle { display: none }
+    /* Remove the padding we set earlier */
+    .header, .marketing, .footer { padding-left: 0; padding-right: 0; }
+    /* Space out the masthead */
+    /* dropdown menu 재정의 */
+    .navbar-default .navbar-nav > li > a { color: #000; font-size: 22px; }
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { font-weight: bold; color: red; background-color: transparent; }
+    .dropdown-menu { position: fixed; top: 100%; min-width: 100% }
+    .dropdown-menu li { float: left; }
+    .dropdown-menu { top: 100%; left: 0; z-index: 1000; display: none; float: left; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #fff; -webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175); box-shadow: 0 6px 12px rgba(0, 0, 0, .175); }
 }
-#header { border-top: 5px solid #e60617;}
-
+#header { border-top: 5px solid #e60617; }
 /* Responsive: Portrait tablets and mobile */
 @media (max-width: 767px) {
-  .collapse { display: none;}
+    .collapse { display: none; }
 }
+/* ****************** common ****************** */
+body>a.sr-only { background-color: #000; color: #fff; text-align: center; display: block; padding: 10px;}
+.sub-visual { border: 1px solid #ccc; border-width: 1px 0; height: 184px; background: #fff url(../images/sub-visual.png) 50% 0 no-repeat; }
+.sub-visual h3 { font-size: 40px; margin-top: 40px; color: #000; }
+.sub-visual p { font-size: 16px; }
+.table-header { margin-bottom: 10px; }
+.table-footer { text-align: center; margin-left: auto; margin-right: auto; }
+.table { border-top: 2px solid #d5001e; border-bottom: 1px solid #ddd; }
+.table th { text-align: center; background-color: #f6f6f6; border-bottom-width: 1px !important; }
+#body:focus { outline: none; }
+#body > div { padding-top: 50px; padding-bottom: 70px; }
+#body > div h1 { margin-bottom: 20px; }
+#body h1 { font-size: 30px; margin-top: 0; color: #000; }
+#body h2 { font-size: 20px; background: url(../images/ico-h2.png) 0 50% no-repeat; text-indent: 20px; color: #000; }
+#body h3 { font-size: 16px; color: #000; }
+@media (max-width: 767px) {
+    [class*='col-xs'] img { width: 100%; }
+}
+.w100 { width: 100%;}
+/* ****************** sidebar ****************** */
+.sidebar { position: fixed; width: 200px; z-index: 100; left: 50%; margin-top: 240px; margin-left: 580px; }
+.sidebar li { list-style-type: none; }
+.sidebar li span { width: 15px; height: 15px; border-radius: 50%; border: 2px solid transparent; background-color: #bfbfbf; display: inline-block; }
+.sidebar li.active span { border-color: #e60617; background-color: transparent; }
+.sidebar li div { visibility: hidden; }
+.sidebar li.active div, .sidebar li:hover div, .sidebar li:focus div { visibility: visible !important; }
+.sidebar li.top span { background: transparent url(../images/ico-top.png) 0 0 no-repeat; border: none; }
+.sidebar .nav > li > a { padding-top: 2px; padding-bottom: 2px; padding-left: 0; }
+.sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus { background-color: transparent; }
+.tooltip { margin-top: -2px; }
+/* ****************** 회사소개 ****************** */
+#ceo, #ci { background-color: #f7f7f7; }
+#ceo .row > div + div img { width: 100%; }
+#vision .row { margin-top: 70px; }
+#vision .row img { float: left; }
+#vision img { width: 100%; }
+#ci .row { margin-top: 45px; }
+.address p { margin-bottom: 20px; }
+.address img { margin-right: 10px; }
+/* ****************** 사업소개 ****************** */
+#mmobile .service { padding: 20px; }
+#mmobile .service > div { border: 2px solid #ececec; padding: 20px; width: 48.8%; }
+@media (max-width: 1023px) {
+    #mmobile .service > div { border: 2px solid #ececec; padding: 20px; width: 100%; }
+}
+#mmobile .service > div:first-child { margin-right: 20px; }
+#mmobile .service h3 { font-size: 18px; font-weight: bold; margin-top: 0; }
+#mmobile .service ul { padding-left: 0; list-style-type: none; word-spacing: -1px }
+#mmobile .service li { margin-top: 20px; background: url(../images/ico-li2.png) 0 6px no-repeat; padding-left: 12px; }
+#mmobile .phone { padding-left: 22px; margin-top: 20px; background: url(../images/ico-tel.png) 0 0 no-repeat; }
+#mmobile tbody th { background-color: transparent; text-align: left; }
+#mmobile th + th, #mmobile td { border-left: 1px solid #ddd; }
+#mmobile th, #mmobile td { padding-left: 20px; }
+#brand { background-color: #f4f4f4; }
+#brand .value { margin-top: 50px; margin-bottom: 30px; }
+#brand .value h3 { font-size: 20px; }
+#brand .value ul { font-size: 16px; padding-left: 0; list-style-type: none; }
+#brand .value li { padding-left: 12px; background: url(../images/ico-li3.png) 0 8px no-repeat; margin-top: 10px; }
+#brand .value li span { color: #000; }
+@media (max-width: 767px) {
+    #brand img { width: 100%; }
+}
+#join .container > img { display: block; margin-top: 35px; margin-bottom: 50px; }
+#join h3 { font-size: 16px; margin-top: 40px; margin-bottom: 20px; }
+#join h3 span { background-color: #e60617; color: #fff; padding: 0 6px; border-radius: 4px; margin-right: 10px; font-weight: normal; }
+#join h4 { margin-top: 40px; clear: both; float: none; background: #666 url(../images/ico-h4.png) 8px 6px no-repeat; display: inline-block; color: #fff; padding: 4px 10px 4px 20px; font-size: 14px; font-weight: normal; }
+#join h3 + h4 { margin-top: 0; }
+/* ****************** 인재채용 ****************** */
+#rightpeople h3 { font-size: 30px; }
+#rightpeople h3 span { font-size: 20px; color: #e60617; display: block; margin-bottom: 20px; }
+#rightpeople .container > .row > div + div { border-left: 1px solid #e6e6e6; }
+@media (max-width: 767px) {
+    #rightpeople .container > .row > div + div { border: none; }
+    #rightpeople .row { border-bottom: 1px solid #e6e6e6; }
+}
+#rightpeople ul { padding-left: 20px; margin-top: 40px; margin-bottom: 70px; font-size: 15px; }
+#system { background-color: #f4f4f4; }
+#system .row { padding-top: 35px; padding-bottom: 35px; font-size: 14px; }
+#system .row + .row { border-top: 1px solid #e6e6e6; }
+#system h3 { font-size: 20px; margin-top: 0; margin-bottom: 30px; }
+#system h3 span { padding-right: 10px; }
+#system .col-md-9 { margin-left: -50px; }
+#welfare .row { padding-top: 35px; padding-bottom: 35px; font-size: 14px; }
+#welfare .row + .row { border-top: 1px solid #e6e6e6; }
+#welfare h3 { font-size: 20px; margin-top: 0; margin-bottom: 30px; }
+#welfare ul { padding-left: 20px; }
+#welfare .col-md-9 { margin-left: -50px; }
+/* ****************** 홍보채널 ****************** */
+#press, #advertising { background-color: #f4f4f4; }
+#advertising .list .thumbnail { margin-bottom: 10px; }
+#advertising .list p { text-align: center; margin-bottom: 40px; }
