@@ -1,11 +1,99 @@
-<!--<div class="header">-->
-    <div class="container">
-        <ul class="nav nav-pills pull-right">
-            <li><a href="company.html">회사소개</a></li>
-            <li><a href="business.html">사업소개</a></li>
-            <li><a href="recruit.html">인재채용</a></li>
-            <li><a href="press.html">홍보채널</a></li>
-        </ul>
-        <h3 class="text-muted"><a href="./"><img src="./images/logo.png" alt="KT M mobile"/></a></h3>
+<!-- <header id="header"> -->
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h3 class="logo"><a href="#none"><img src="./images/logo.png" alt="KT M mobile"/></a></h3>
     </div>
-<!--</div>-->
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#none" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">회사소개</a>
+          <ul class="dropdown-menu menu1" role="menu">
+            <li><a href="company.html#company">기업소개</a></li>
+            <li><a href="company.html#ceo">CEO 인사말</a></li>
+            <li><a href="company.html#vision">비전</a></li>
+            <li><a href="company.html#ci">CI</a></li>
+            <li><a href="company.html#location">오시는길</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#none" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">사업소개</a>
+          <ul class="dropdown-menu menu2" role="menu">
+            <li><a href="business.html#mmobile">No.1 M Mobile</a></li>
+            <li><a href="business.html#brand">브랜드 소</a></li>
+            <li><a href="business.html#join">가입신청 안내</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#none" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">인재채용</a>
+          <ul class="dropdown-menu menu3" role="menu">
+            <li><a href="recruit.html#rightpeople">인재상</a></li>
+            <li><a href="recruit.html#system">인사제도</a></li>
+            <li><a href="recruit.html#welfare">복리후생</a></li>
+          </ul>
+        </li>
+        <li class="dropdown last">
+          <a href="#none" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">홍보채널 </a>
+          <ul class="dropdown-menu menu4" role="menu">
+            <li><a href="press.html#notice">공지사항</a></li>
+            <li><a href="press.html#press">보도자료</a></li>
+            <li><a href="press.html#movieClip">Movie Clip</a></li>
+            <li><a href="press.html#advertising">광보/홍보물</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+<!-- </header> -->
+
+
+<script>
+  /*
+   --------------------------------------------------------------
+  |       include migration 할때 script main.js 로 이동 필요         |
+   --------------------------------------------------------------
+   */
+  (function($){
+
+    $(function(){
+
+      // navigation script start
+      var windowSize = $(window).width();
+      // 초기 서브 메뉴 셋팅
+      function adjustMenu() {
+        $('.dropdown').each(function (idx) {
+          var offsetLeft = parseInt($(this).offset().left - 5);
+          var subMenu = $(this).find('.dropdown-menu');
+
+          if(idx < 2) {
+            subMenu.css({'padding-left': offsetLeft});
+          } else if(idx === 2) {
+            subMenu.css({'padding-left': offsetLeft - 10});
+          } else if(idx === 3) {
+            subMenu.css({'padding-left': offsetLeft - 275});
+          }
+
+        })
+      }
+      adjustMenu();
+
+      $(window).on('resize',function(){
+        windowSize = $(window).width();
+
+        if(windowSize >= 768) {
+          adjustMenu();
+        }
+
+      })
+
+    })
+
+  })(jQuery);
+
+</script>
