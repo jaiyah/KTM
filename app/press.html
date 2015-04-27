@@ -24,7 +24,11 @@
 <body>
 <a class="sr-only sr-only-focusable" href="#body">주요 컨텐츠로 바로가기</a>
 
-<div class="header"><!--header.html--></div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <header id="header">
+        <!-- include header.html -->
+    </header>
+</nav>
 
 <div class="sub-visual">
     <div class="container">
@@ -37,17 +41,18 @@
     </div>
 </div>
 
-<div class="sidebar hidden-sm">
-    <ul class="nav">
-        <li class="active"><a href="#notice" data-toggle="tooltip" data-placement="left" title="공지사항" aria-label="공지사항"><span aria-hidden="true"></span></a></li>
-        <li><a href="#press" data-toggle="tooltip" data-placement="left" title="보도자료" aria-label="보도자료"><span aria-hidden="true"></span></a></li>
-        <li><a href="#movieClip" data-toggle="tooltip" data-placement="left" title="Movie Clip" aria-label="Movie Clip"><span aria-hidden="true"></span></a></li>
-        <li><a href="#advertising" data-toggle="tooltip" data-placement="left" title="광고/홍보물" aria-label="광고/홍보물"><span aria-hidden="true"></span></a></li>
-        <li class="top"><a href="#" aria-label="위로가기"><span aria-hidden="true"></span></a></li>
-    </ul>
-</div>
-
 <div id="body" tabindex="-1">
+
+    <div class="sidebar hidden-sm">
+        <ul class="nav">
+            <li class="active"><a href="#notice" data-toggle="tooltip" data-placement="left" title="공지사항" aria-label="공지사항"><span aria-hidden="true"></span></a></li>
+            <li><a href="#press" data-toggle="tooltip" data-placement="left" title="보도자료" aria-label="보도자료"><span aria-hidden="true"></span></a></li>
+            <li><a href="#movieClip" data-toggle="tooltip" data-placement="left" title="Movie Clip" aria-label="Movie Clip"><span aria-hidden="true"></span></a></li>
+            <li><a href="#advertising" data-toggle="tooltip" data-placement="left" title="광고/홍보물" aria-label="광고/홍보물"><span aria-hidden="true"></span></a></li>
+            <li class="top"><a href="#" aria-label="위로가기"><span aria-hidden="true"></span></a></li>
+        </ul>
+    </div>
+
     <div id="notice">
         <div class="container">
             <h1>공지사항</h1>
@@ -147,8 +152,8 @@
 
                 <div class="table-footer">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#" aria-label="맨처음"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a></li>
-                        <li class="disabled"><a href="#" aria-label="이전"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="이전"><span class="glyphicon prev" aria-hidden="true"></span></a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">현재활성화페이지</span></a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
@@ -159,8 +164,8 @@
                         <li><a href="#">8</a></li>
                         <li><a href="#">9</a></li>
                         <li><a href="#">10</a></li>
-                        <li><a href="#" aria-label="다음"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></li>
-                        <li><a href="#" aria-label="맨끝"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="다음"><span class="glyphicon next" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨끝"><span class="glyphicon last" aria-hidden="true"></span></a></li>
                     </ul>
                 </div>
             </form>
@@ -264,8 +269,8 @@
 
                 <div class="table-footer">
                     <ul class="pagination">
-                        <li class="disabled"><a href="#" aria-label="맨처음"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a></li>
-                        <li class="disabled"><a href="#" aria-label="이전"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="이전"><span class="glyphicon prev" aria-hidden="true"></span></a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">현재활성화페이지</span></a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
@@ -276,8 +281,8 @@
                         <li><a href="#">8</a></li>
                         <li><a href="#">9</a></li>
                         <li><a href="#">10</a></li>
-                        <li><a href="#" aria-label="다음"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></li>
-                        <li><a href="#" aria-label="맨끝"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="다음"><span class="glyphicon next" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨끝"><span class="glyphicon last" aria-hidden="true"></span></a></li>
                     </ul>
                 </div>
             </form>
@@ -345,8 +350,8 @@
 
             <div class="table-footer">
                 <ul class="pagination">
-                    <li class="disabled"><a href="#" aria-label="맨처음"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></a></li>
-                    <li class="disabled"><a href="#" aria-label="이전"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></a></li>
+                    <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a></li>
+                    <li><a href="#" aria-label="이전"><span class="glyphicon prev" aria-hidden="true"></span></a></li>
                     <li class="active"><a href="#">1 <span class="sr-only">현재활성화페이지</span></a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
@@ -357,8 +362,8 @@
                     <li><a href="#">8</a></li>
                     <li><a href="#">9</a></li>
                     <li><a href="#">10</a></li>
-                    <li><a href="#" aria-label="다음"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a></li>
-                    <li><a href="#" aria-label="맨끝"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></a></li>
+                    <li><a href="#" aria-label="다음"><span class="glyphicon next" aria-hidden="true"></span></a></li>
+                    <li><a href="#" aria-label="맨끝"><span class="glyphicon last" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
             
