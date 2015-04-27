@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <h3 class="logo"><a href="#none"><img src="./images/logo.png" alt="KT M mobile"/></a></h3>
+      <h3 class="logo"><a href="./"><img src="./images/logo.png" alt="KT M mobile"/></a></h3>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -51,49 +51,3 @@
     <!--/.nav-collapse -->
   </div>
 <!-- </header> -->
-
-
-<script>
-  /*
-   --------------------------------------------------------------
-  |       include migration 할때 script main.js 로 이동 필요         |
-   --------------------------------------------------------------
-   */
-  (function($){
-
-    $(function(){
-
-      // navigation script start
-      var windowSize = $(window).width();
-      // 초기 서브 메뉴 셋팅
-      function adjustMenu() {
-        $('.dropdown').each(function (idx) {
-          var offsetLeft = parseInt($(this).offset().left - 5);
-          var subMenu = $(this).find('.dropdown-menu');
-
-          if(idx < 2) {
-            subMenu.css({'padding-left': offsetLeft});
-          } else if(idx === 2) {
-            subMenu.css({'padding-left': offsetLeft - 10});
-          } else if(idx === 3) {
-            subMenu.css({'padding-left': offsetLeft - 275});
-          }
-
-        })
-      }
-      adjustMenu();
-
-      $(window).on('resize',function(){
-        windowSize = $(window).width();
-
-        if(windowSize >= 768) {
-          adjustMenu();
-        }
-
-      })
-
-    })
-
-  })(jQuery);
-
-</script>
