@@ -31,9 +31,7 @@
                 if (windowSize >= 768) {
                     adjustMenu();
                 }
-
             })
-
         })
 
 
@@ -52,7 +50,8 @@
             $('[data-toggle="tooltip"]').tooltip('show');
         })
 
-        // sidebar scroll animation
+
+        // animation
         $.fn.scrollAni = function () {
             return this.each(function () {
                 $('li:not(.top)').on({
@@ -73,8 +72,8 @@
                 });
             })
         }
-        $('.sidebar').scrollAni();
 
+        $('.sidebar').scrollAni();
 
     });
 })(jQuery);
