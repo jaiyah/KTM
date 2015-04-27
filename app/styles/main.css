@@ -1,32 +1,101 @@
+/*
+ ----------------------------------------------------
+|                 font 나눔고딕 적용                    |
+ ----------------------------------------------------
+*/
+@font-face {
+  font-family:'NanumGothic';
+  src: url('font/NanumGothic.eot');
+  src: url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+  url('font/NanumGothic.woff') format('woff'),
+  url('font/NanumGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* Space out content a bit */
-body { color: #535353; }
+body { margin-top: 50px; color: #535353; font-family:'맑은고딕','NanumGothic', 'MalgunGothic'; }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .footer { padding-left: 15px; padding-right: 15px; }
+/* Custom page header */
+.header { border-bottom: 1px solid #e5e5e5; }
 /* Make the masthead heading the same height as the navigation */
 .header h3 { margin-top: 0; margin-bottom: 0; line-height: 40px; padding-bottom: 19px; }
 /* Custom page footer */
 .footer { padding-top: 19px; color: #777; border-top: 1px solid #e5e5e5; }
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container { max-width: 1000px; }
-    .navbar-toggle { display: none }
-    /* Remove the padding we set earlier */
-    .header, .marketing, .footer { padding-left: 0; padding-right: 0; }
-    /* Space out the masthead */
-    /* dropdown menu 재정의 */
-    .navbar-default .navbar-nav > li > a { color: #000; font-size: 22px; }
-    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { font-weight: bold; color: red; background-color: transparent; }
-    .dropdown-menu { position: fixed; top: 100%; min-width: 100% }
-    .dropdown-menu li { float: left; }
-    .dropdown-menu { top: 100%; left: 0; z-index: 1000; display: none; float: left; padding: 5px 0; margin: 2px 0 0; font-size: 14px; text-align: left; list-style: none; background-color: #fff; -webkit-background-clip: padding-box; background-clip: padding-box; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175); box-shadow: 0 6px 12px rgba(0, 0, 0, .175); }
-}
+/* Responsive: Portrait mobile 및 768px 보다 작은 기기들은 미디어 쿼리 없이 모바일 기준 */
+
+/*
+ ------------------------------------------------------------------------------------------
+|        Responsive: Portrait mobile 및 768px 보다 작은 기기들은 미디어 쿼리 없이 모바일 기준         |
+ ------------------------------------------------------------------------------------------
+*/
+#header .logo { width: 20px; height: 20px; }
 #header { border-top: 5px solid #e60617; }
-/* Responsive: Portrait tablets and mobile */
+#header .container { margin: 0 auto; padding-left: 0; }
+#header .logo img { width: 100%; height: auto; }
+#header .logo a { display: block; }
+.dropdown-menu li { position: relative; }
+#m_visual { }
+#m_visual .container { padding: 0; width: 100%; }
+#m_visual .visual { padding-left: 20px; }
+#m_visual .visual img { width: 100%; height: auto; }
+/* Responsive: Portrait mobile 및 768px 보다 작은 기기 */
 @media (max-width: 767px) {
-    .collapse { display: none; }
+  /*.collapse { display: none;}*/
 }
-/* ****************** common ****************** */
-body>a.sr-only { background-color: #000; color: #fff; text-align: center; display: block; padding: 10px;}
+
+
+/*
+ ----------------------------------------------------
+|        Responsive: Portrait tablets and up         |
+ ----------------------------------------------------
+*/
+@media screen and (min-width: 768px) {
+  body { margin-top: 115px }
+  .navbar-toggle { display: none }
+  /* Remove the padding we set earlier */
+  .header, .marketing, .footer { padding-left: 0; padding-right: 0; }
+  /* Space out the masthead */
+  .header { margin-bottom: 30px; }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron { border-bottom: 0; }
+  #header { padding-left: 30px; padding-right: 30px; }
+  #header .container { width: 100%; padding: 0; }
+  #header .logo { width: 171px; height: 30px; margin-top: 40px; margin-bottom: 40px; }
+  .navbar-default .navbar-nav > li > a { color: #000; font-size: 22px; line-height: 1; }
+  /* dropdown menu redefine */
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { font-weight: bold; color: red; background-color: transparent; }
+  .navbar-nav { float: right; }
+  .dropdown-menu { position: fixed; top: 100%; min-width: 100%; }
+  .dropdown-menu li { float: left; }
+  #header .navbar-nav { margin-top: 30px; margin-bottom: 10px; }
+  #header .navbar-nav > li > a { margin-right: 20px; }
+  #header .navbar-nav > li.last > a { margin-right: 0; padding-right: 0; }
+  #m_visual { padding-left: 30px; padding-right: 30px; }
+}
+
+/*
+ ----------------------------------------------------
+|      Responsive: Portrait Desktop, 992px 이상       |
+ ----------------------------------------------------
+*/
+@media screen and (min-width: 992px) {
+  body { margin-top: 91px }
+  #header .container, .container, #m_visual .container { width: 1000px; margin: 0 auto; }
+  #header .logo { width: 201px; height: 37px; margin: 24px 105px 24px 0; }
+  #header .navbar-nav { margin-top: 23px; margin-bottom: 10px; }
+  #header .navbar-nav > li > a { margin-right: 68px; }
+  #header .navbar-nav > li.last > a { margin-right: 47px; }
+  #m_visual .visual { padding-left: 0; }
+}
+/*
+ ----------------------------------------------------
+|                       common                       |
+ ----------------------------------------------------
+*/
+body > a.sr-only { background-color: #000; color: #fff; text-align: center; display: block; padding: 10px; }
 .sub-visual { border: 1px solid #ccc; border-width: 1px 0; height: 184px; background: #fff url(../images/sub-visual.png) 50% 0 no-repeat; }
 .sub-visual h3 { font-size: 40px; margin-top: 40px; color: #000; }
 .sub-visual p { font-size: 16px; }
@@ -41,10 +110,14 @@ body>a.sr-only { background-color: #000; color: #fff; text-align: center; displa
 #body h2 { font-size: 20px; background: url(../images/ico-h2.png) 0 50% no-repeat; text-indent: 20px; color: #000; }
 #body h3 { font-size: 16px; color: #000; }
 @media (max-width: 767px) {
-    [class*='col-xs'] img { width: 100%; }
+  [class*='col-xs'] img { width: 100%; }
 }
-.w100 { width: 100%;}
-/* ****************** sidebar ****************** */
+.w100 { width: 100%; }
+/*
+ ----------------------------------------------------
+|                      sidebar                       |
+ ----------------------------------------------------
+*/
 .sidebar { position: fixed; width: 200px; z-index: 100; left: 50%; margin-top: 240px; margin-left: 580px; }
 .sidebar li { list-style-type: none; }
 .sidebar li span { width: 15px; height: 15px; border-radius: 50%; border: 2px solid transparent; background-color: #bfbfbf; display: inline-block; }
@@ -55,7 +128,12 @@ body>a.sr-only { background-color: #000; color: #fff; text-align: center; displa
 .sidebar .nav > li > a { padding-top: 2px; padding-bottom: 2px; padding-left: 0; }
 .sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus { background-color: transparent; }
 .tooltip { margin-top: -2px; }
-/* ****************** 회사소개 ****************** */
+
+/*
+ ----------------------------------------------------
+|                      회사소개                        |
+ ----------------------------------------------------
+*/
 #ceo, #ci { background-color: #f7f7f7; }
 #ceo .row > div + div img { width: 100%; }
 #vision .row { margin-top: 70px; }
@@ -64,11 +142,16 @@ body>a.sr-only { background-color: #000; color: #fff; text-align: center; displa
 #ci .row { margin-top: 45px; }
 .address p { margin-bottom: 20px; }
 .address img { margin-right: 10px; }
-/* ****************** 사업소개 ****************** */
+
+/*
+ ----------------------------------------------------
+|                      사업소개                        |
+ ----------------------------------------------------
+*/
 #mmobile .service { padding: 20px; }
 #mmobile .service > div { border: 2px solid #ececec; padding: 20px; width: 48.8%; }
 @media (max-width: 1023px) {
-    #mmobile .service > div { border: 2px solid #ececec; padding: 20px; width: 100%; }
+  #mmobile .service > div { border: 2px solid #ececec; padding: 20px; width: 100%; }
 }
 #mmobile .service > div:first-child { margin-right: 20px; }
 #mmobile .service h3 { font-size: 18px; font-weight: bold; margin-top: 0; }
@@ -85,20 +168,25 @@ body>a.sr-only { background-color: #000; color: #fff; text-align: center; displa
 #brand .value li { padding-left: 12px; background: url(../images/ico-li3.png) 0 8px no-repeat; margin-top: 10px; }
 #brand .value li span { color: #000; }
 @media (max-width: 767px) {
-    #brand img { width: 100%; }
+  #brand img { width: 100%; }
 }
 #join .container > img { display: block; margin-top: 35px; margin-bottom: 50px; }
 #join h3 { font-size: 16px; margin-top: 40px; margin-bottom: 20px; }
 #join h3 span { background-color: #e60617; color: #fff; padding: 0 6px; border-radius: 4px; margin-right: 10px; font-weight: normal; }
 #join h4 { margin-top: 40px; clear: both; float: none; background: #666 url(../images/ico-h4.png) 8px 6px no-repeat; display: inline-block; color: #fff; padding: 4px 10px 4px 20px; font-size: 14px; font-weight: normal; }
 #join h3 + h4 { margin-top: 0; }
-/* ****************** 인재채용 ****************** */
+
+/*
+ ----------------------------------------------------
+|                      인재채용                        |
+ ----------------------------------------------------
+*/
 #rightpeople h3 { font-size: 30px; }
 #rightpeople h3 span { font-size: 20px; color: #e60617; display: block; margin-bottom: 20px; }
 #rightpeople .container > .row > div + div { border-left: 1px solid #e6e6e6; }
 @media (max-width: 767px) {
-    #rightpeople .container > .row > div + div { border: none; }
-    #rightpeople .row { border-bottom: 1px solid #e6e6e6; }
+  #rightpeople .container > .row > div + div { border: none; }
+  #rightpeople .row { border-bottom: 1px solid #e6e6e6; }
 }
 #rightpeople ul { padding-left: 20px; margin-top: 40px; margin-bottom: 70px; font-size: 15px; }
 #system { background-color: #f4f4f4; }
@@ -112,7 +200,14 @@ body>a.sr-only { background-color: #000; color: #fff; text-align: center; displa
 #welfare h3 { font-size: 20px; margin-top: 0; margin-bottom: 30px; }
 #welfare ul { padding-left: 20px; }
 #welfare .col-md-9 { margin-left: -50px; }
-/* ****************** 홍보채널 ****************** */
+
+/*
+ ----------------------------------------------------
+|                      홍보채널                        |
+ ----------------------------------------------------
+*/
 #press, #advertising { background-color: #f4f4f4; }
 #advertising .list .thumbnail { margin-bottom: 10px; }
 #advertising .list p { text-align: center; margin-bottom: 40px; }
+
+
