@@ -1,0 +1,15 @@
+{
+  "name": "respond.min",
+  "_cacheHeaders": {
+    "ETag": "\"53e3c6a6-1119\"",
+    "Last-Modified": "Thu, 07 Aug 2014 18:34:14 GMT",
+    "Content-Length": "4377",
+    "Content-Type": "application/javascript; charset=utf-8"
+  },
+  "_release": "e-tag:53e3c6a6-",
+  "main": "index.js",
+  "_source": "https://oss.maxcdn.com/respond/1.4.2/respond.min.js",
+  "_target": "*",
+  "_originalSource": "https://oss.maxcdn.com/respond/1.4.2/respond.min.js",
+  "_direct": true
+}
