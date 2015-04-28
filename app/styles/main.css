@@ -190,20 +190,25 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 .sub-visual { border: 1px solid #ccc; border-width: 1px 0; height: 184px; background: #fff url(../images/sub-visual.png) 50% 0 no-repeat; }
 .sub-visual h3 { font-size: 40px; margin-top: 40px; color: #000; }
 .sub-visual p { font-size: 16px; }
-.table-header { margin-bottom: 10px; }
-.table-footer { text-align: center; margin-left: auto; margin-right: auto; }
 .table { border-top: 2px solid #d5001e; border-bottom: 1px solid #ddd; }
 .table th { text-align: center; background-color: #f6f6f6; border-bottom-width: 1px !important; }
 #body:focus { outline: none; }
 #body > div { padding-top: 50px; padding-bottom: 70px; }
 #body > div h1 { margin-bottom: 20px; }
-#body h1 { font-size: 30px; margin-top: 0; color: #000; }
+#body h1 { font-size: 30px; margin-top: 0; color: #000; font-weight: 600; }
 #body h2 { font-size: 20px; background: url(../images/ico-h2.png) 0 50% no-repeat; text-indent: 20px; color: #000; }
-#body h3 { font-size: 16px; color: #000; }
+#body h3 { font-size: 16px; color: #000; font-weight: 600; }
 @media (max-width: 767px) {
   [class*='col-xs'] img { width: 100%; }
 }
 .w100 { width: 100%; }
+.mgt50 { margin-top: 50px !important;}
+.initialism { color: #999;}
+.initialism strong { color: #000; font-weight: normal;}
+.glyphicon.first { background: url(../images/ico-first.png) 0 0 no-repeat; width: 10px; height: 10px; }
+.glyphicon.last { background: url(../images/ico-last.png) 0 0 no-repeat; width: 10px; height: 10px; }
+.glyphicon.prev { background: url(../images/ico-prev.png) 3px 0 no-repeat; width: 10px; height: 10px; }
+.glyphicon.next { background: url(../images/ico-next.png) 3px 0 no-repeat; width: 10px; height: 10px; }
 /*
  ----------------------------------------------------
 |                      sidebar                       |
@@ -246,7 +251,7 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 }
 #mmobile .service > div:first-child { margin-right: 20px; }
 #mmobile .service h3 { font-size: 18px; font-weight: bold; margin-top: 0; }
-#mmobile .service ul { padding-left: 0; list-style-type: none; word-spacing: -1px }
+#mmobile .service ul { padding-left: 0; list-style-type: none; word-spacing: -2px; letter-spacing: -1px; }
 #mmobile .service li { margin-top: 20px; background: url(../images/ico-li2.png) 0 6px no-repeat; padding-left: 12px; }
 #mmobile .phone { padding-left: 22px; margin-top: 20px; background: url(../images/ico-tel.png) 0 0 no-repeat; }
 #mmobile tbody th { background-color: transparent; text-align: left; }
@@ -266,31 +271,43 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 #join h3 span { background-color: #e60617; color: #fff; padding: 0 6px; border-radius: 4px; margin-right: 10px; font-weight: normal; }
 #join h4 { margin-top: 40px; clear: both; float: none; background: #666 url(../images/ico-h4.png) 8px 6px no-repeat; display: inline-block; color: #fff; padding: 4px 10px 4px 20px; font-size: 14px; font-weight: normal; }
 #join h3 + h4 { margin-top: 0; }
+#join .row{ margin-top: 40px;}
+#join .btn-group { margin-top: 150px; text-align: center; display: block; }
+#join .btn-group > .btn { padding: 10px 40px; border-radius: 30px; font-size: 16px; float: none;}
+#join .btn-group > .btn + .btn { margin-left: 30px;}
 
 /*
  ----------------------------------------------------
 |                      인재채용                        |
  ----------------------------------------------------
 */
+#rightpeople ul, #welfare ul { padding-left: 0; }
+#rightpeople li, #welfare li { list-style-type: none; background: url(../images/ico-li.png) 0 9px no-repeat; padding-left: 12px; }
+
 #rightpeople h3 { font-size: 30px; }
 #rightpeople h3 span { font-size: 20px; color: #e60617; display: block; margin-bottom: 20px; }
 #rightpeople .container > .row > div + div { border-left: 1px solid #e6e6e6; }
-@media (max-width: 767px) {
-  #rightpeople .container > .row > div + div { border: none; }
-  #rightpeople .row { border-bottom: 1px solid #e6e6e6; }
-}
-#rightpeople ul { padding-left: 20px; margin-top: 40px; margin-bottom: 70px; font-size: 15px; }
+#rightpeople ul { margin: 40px 0; font-size: 15px; }
+#rightpeople img { margin-top: 40px;}
 #system { background-color: #f4f4f4; }
 #system .row { padding-top: 35px; padding-bottom: 35px; font-size: 14px; }
 #system .row + .row { border-top: 1px solid #e6e6e6; }
 #system h3 { font-size: 20px; margin-top: 0; margin-bottom: 30px; }
 #system h3 span { padding-right: 10px; }
-#system .col-md-9 { margin-left: -50px; }
+#system .col-xs-9 { margin-left: -50px; }
 #welfare .row { padding-top: 35px; padding-bottom: 35px; font-size: 14px; }
 #welfare .row + .row { border-top: 1px solid #e6e6e6; }
 #welfare h3 { font-size: 20px; margin-top: 0; margin-bottom: 30px; }
-#welfare ul { padding-left: 20px; }
-#welfare .col-md-9 { margin-left: -50px; }
+#welfare .col-xs-9 { margin-left: -50px; }
+
+@media (max-width: 767px) {
+    #rightpeople .container > .row > div + div { border: none; }
+    #rightpeople .row { border-bottom: 1px solid #e6e6e6; }
+    #rightpeople .col-xs-4 { text-align: center; }
+    #rightpeople img { width: 100%; }
+    #system .col-xs-9 { margin-left:0; }
+    #welfare .col-xs-9 { margin-left:0; }
+}
 
 /*
  ----------------------------------------------------
@@ -300,5 +317,12 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 #press, #advertising { background-color: #f4f4f4; }
 #advertising .list .thumbnail { margin-bottom: 10px; }
 #advertising .list p { text-align: center; margin-bottom: 40px; }
+#notice .table td:first-child, #notice .table td:last-child { text-align: right; padding-right: 4%; }
+#notice .table td:nth-child(3) { text-align: center; }
+#press .table td:first-child, #press .table td:last-child { text-align: right; padding-right: 4%; }
+#press .table td:nth-child(3) { text-align: center; }
+.table-header { margin-bottom: 10px; }
+.table-header .btn-default { background-color: #959595; border-color: transparent; color: #fff; margin-left: -4px; }
+.table-footer { text-align: center; margin-left: auto; margin-right: auto; }
 
 

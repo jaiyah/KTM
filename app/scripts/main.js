@@ -56,7 +56,6 @@
         $('body').scrollspy({target: '.sidebar'});
 
         // sidebar tooltip
-        $('[data-toggle="tooltip"]').tooltip('show');
         $('.sidebar').on('activate.bs.scrollspy', function () {
             $('[data-toggle="tooltip"]').tooltip('show');
         })
