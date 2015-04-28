@@ -3,41 +3,52 @@
 
         // header include
         $.get("header.html", function (data) {
-            $("header").html(data);
-            // navigation script start
-            var windowSize = $(window).width();
-            // 초기 서브 메뉴 셋팅
+            $("#header").html(data);
+
+            // 2depth Menu 초기 셋팅
             function adjustMenu() {
                 $('.dropdown').each(function (idx) {
-                    var offsetLeft = parseInt($(this).offset().left - 5);
+                    var offsetLeft = parseInt($(this).offset().left);
                     var subMenu = $(this).find('.dropdown-menu');
-
-                    if (idx < 2) {
+                    if(idx < 3) {
                         subMenu.css({'padding-left': offsetLeft});
-                    } else if (idx === 2) {
-                        subMenu.css({'padding-left': offsetLeft - 10});
-                    } else if (idx === 3) {
-                        subMenu.css({'padding-left': offsetLeft - 275});
+                    } else {
+                        subMenu.css({'padding-left': offsetLeft - 290});
                     }
 
                 })
             }
-
             adjustMenu();
 
-            $(window).on('resize', function () {
+            var windowSize = $(window).width();
+            $(window).on('resize',function(){
                 windowSize = $(window).width();
 
-                if (windowSize >= 768) {
-                    adjustMenu();
-                }
+                $('.dropdown').each(function (idx) {
+                    var offsetLeft = parseInt($(this).offset().left - 5);
+                    var subMenu = $(this).find('.dropdown-menu');
+                    // subMenu.css({'padding-left': offsetLeft});
+
+                    if(windowSize >= 768) {
+                        if(idx < 3) {
+                            subMenu.css({'padding-left': offsetLeft});
+                        } else {
+                            subMenu.css({'padding-left': offsetLeft - 280});
+                        }
+                    } else {
+                        subMenu.css({'padding-left': 0})
+                    }
+
+                })
+
             })
+
         })
 
 
         // footer include
         $.get("footer.html", function (data) {
-            $(".footer").html(data);
+            $("#footer").html(data);
         });
 
 
@@ -76,4 +87,3 @@
 
     });
 })(jQuery);
-
