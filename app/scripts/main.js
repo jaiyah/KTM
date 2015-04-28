@@ -2,7 +2,7 @@
     $(function () {
 
         // header include
-        $.get("header.html", function (data) {
+        $.get("./header.html", function (data) {
             $("#header").html(data);
 
             // 2depth Menu 초기 셋팅
@@ -48,7 +48,7 @@
 
 
         // footer include
-        $.get("footer.html", function (data) {
+        $.get("./footer.html", function (data) {
             $("#footer").html(data);
             // 패밀리 사이트
             $('#footer select').change(function () {
