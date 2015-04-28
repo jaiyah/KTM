@@ -49,11 +49,9 @@ body { margin-top: 50px; color: #535353; font-family: '나눔고딕', 'NanumGoth
 */
 .navbar-default {border-color:#ccc}
 #header { border-top: 5px solid #e60617;background-color: #fff; }
-#header .logo {  }
 #header .logo a { display: block;}
 #header .logo img { width: 100%; height: auto; display: block;}
 #header .dropdown-menu li { position: relative; }
-#m_visual { }
 #m_visual .container { padding: 0; width: 100%; }
 #m_visual .visual { padding-left: 20px; }
 #m_visual .visual img { width: 100%; height: auto; }
@@ -62,6 +60,7 @@ body { margin-top: 50px; color: #535353; font-family: '나눔고딕', 'NanumGoth
 .navbar-nav .open .dropdown-menu > li > a:hover { background: url("../images/menu_dotted.png") no-repeat 0 50% !important;  }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {color:#E60617; text-decoration: underline; background-color: none;}
+
 
 /*
  ----------------------------------------------------
@@ -389,20 +388,8 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
     #media .media > div { padding: 0 5px; }
     #media .media .thumbnail { margin-bottom: 10px; }
 }
-/*
- ------------------------------------------------------------------------------------------
-|        Responsive: Portrait mobile 및 768px 보다 작은 기기들은 미디어 쿼리 없이 모바일 기준         |
- ------------------------------------------------------------------------------------------
-*/
-#header .logo { width: 20px; height: 20px; }
-#header { border-top: 5px solid #e60617; }
-#header .container { margin: 0 auto; padding-left: 0; }
-#header .logo img { width: 100%; height: auto; }
-#header .logo a { display: block; }
-.dropdown-menu li { position: relative; }
-#m_visual .container { padding: 0; width: 100%; }
-#m_visual .visual { padding-left: 20px; }
-#m_visual .visual img { width: 100%; height: auto; }
+
+
 /* Responsive: Portrait mobile 및 768px 보다 작은 기기 */
 @media (max-width: 767px) {
     body { font-size: 12px; word-spacing: -1px; }
