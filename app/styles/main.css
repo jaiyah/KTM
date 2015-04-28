@@ -17,7 +17,7 @@
 
 
 /* Space out content a bit */
-body { margin-top: 50px; color: #535353; font-family: '나눔고딕', 'NanumGothic', 'MalgunGothic',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif; overflow-x: hidden; }
+body { margin-top: 45px; color: #535353; font-family: '나눔고딕', 'NanumGothic', 'MalgunGothic',Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif; overflow-x: hidden; }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header, .footer { padding-left: 15px; padding-right: 15px; }
 /* Custom page header */
