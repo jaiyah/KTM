@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KTM > 홍보채널</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -45,10 +45,12 @@
 
     <div class="sidebar hidden-sm">
         <ul class="nav">
-            <li class="active"><a href="#notice" data-toggle="tooltip" data-placement="left" title="공지사항" aria-label="공지사항"><span aria-hidden="true"></span></a></li>
-            <li><a href="#press" data-toggle="tooltip" data-placement="left" title="보도자료" aria-label="보도자료"><span aria-hidden="true"></span></a></li>
-            <li><a href="#movieClip" data-toggle="tooltip" data-placement="left" title="Movie Clip" aria-label="Movie Clip"><span aria-hidden="true"></span></a></li>
-            <li><a href="#advertising" data-toggle="tooltip" data-placement="left" title="광고/홍보물" aria-label="광고/홍보물"><span aria-hidden="true"></span></a></li>
+            <li class="active"><a href="#notice" data-toggle="tooltip" data-placement="left" title="공지사항"
+                                  aria-label="공지사항"><span aria-hidden="true"></span></a></li>
+            <li><a href="#press" data-toggle="tooltip" data-placement="left" title="보도자료" aria-label="보도자료"><span
+                    aria-hidden="true"></span></a></li>
+            <li><a href="#media" data-toggle="tooltip" data-placement="left" title="Media" aria-label="Media"><span
+                    aria-hidden="true"></span></a></li>
             <li class="top"><a href="#" aria-label="위로가기"><span aria-hidden="true"></span></a></li>
         </ul>
     </div>
@@ -60,8 +62,7 @@
             <form class="form-inline">
 
                 <div class="table-header row">
-                    <div class="col-md-2"><span class="text-primary">총 10개</span></div>
-                    <div class="col-md-10 text-right hidden-xs">
+                    <div class="col-md-12 text-right hidden-xs">
                         <select name="" id="" class="form-control">
                             <option value="">제목</option>
                         </select>
@@ -73,86 +74,57 @@
                         <button type="submit" class="btn btn-default">검색</button>
                     </div>
                 </div>
-                <table class="table table-hover">
-                    <col width="10%"/>
-                    <col/>
-                    <col width="10%"/>
-                    <col width="10%"/>
-                    <thead>
-                    <tr>
-                        <th>번호</th>
-                        <th>제목</th>
-                        <th>등록일</th>
-                        <th>조회수</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>10</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>G4 예약가입하고, 최신 스마트워치 받으세요!</td>
-                        <td>2015.05.01</td>
-                        <td>123</td>
-                    </tr>
-                    </tbody>
-                </table>
+
+                <div class="notice">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <img src="./images/notice-thum.png" alt=""/>
+                        </div>
+                        <div class="col-xs-9">
+                            <a href="#none" data-toggle="modal" data-target="#noticeView">
+                                <h5>알뜰폰 전문기업 kt M mobile이 공식출범하였습니다. </h5>
+
+                                <p>kt의 MVNO(알뜰폰) 서비스를 더욱 향상화, 다양화,전문화하기 위하여 kt의 100%출자로 주식회사 케이티 엠모바일이
+                                    2015년 5월 1일공식출범하였습니다. (주)케이티 엠모바일은 고객에게 다양한 서비스를 제공하고 </p>
+                                <span class="date">2015. 05. 01</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <img src="./images/notice-thum.png" alt=""/>
+                        </div>
+                        <div class="col-xs-9">
+                            <a href="#none" data-toggle="modal" data-target="#noticeView">
+                                <h5>알뜰폰 전문기업 kt M mobile이 공식출범하였습니다. </h5>
+
+                                <p>kt의 MVNO(알뜰폰) 서비스를 더욱 향상화, 다양화,전문화하기 위하여 kt의 100%출자로 주식회사 케이티 엠모바일이
+                                    2015년 5월 1일공식출범하였습니다. (주)케이티 엠모바일은 고객에게 다양한 서비스를 제공하고 </p>
+                                <span class="date">2015. 05. 01</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <img src="./images/notice-thum.png" alt=""/>
+                        </div>
+                        <div class="col-xs-9">
+                            <a href="#none" data-toggle="modal" data-target="#noticeView">
+                                <h5>알뜰폰 전문기업 kt M mobile이 공식출범하였습니다. </h5>
+
+                                <p>kt의 MVNO(알뜰폰) 서비스를 더욱 향상화, 다양화,전문화하기 위하여 kt의 100%출자로 주식회사 케이티 엠모바일이
+                                    2015년 5월 1일공식출범하였습니다. (주)케이티 엠모바일은 고객에게 다양한 서비스를 제공하고 </p>
+                                <span class="date">2015. 05. 01</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
 
                 <div class="table-footer">
                     <ul class="pagination">
-                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a>
+                        </li>
                         <li><a href="#" aria-label="이전"><span class="glyphicon prev" aria-hidden="true"></span></a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">현재활성화페이지</span></a></li>
                         <li><a href="#">2</a></li>
@@ -169,32 +141,72 @@
                     </ul>
                 </div>
             </form>
+
+            <!-- Modal -->
+            <div class="modal fade" id="noticeView" tabindex="-1" role="dialog" aria-labelledby="noticeView"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="모달창닫기"></button>
+                            <h4 class="modal-title" id="noticeView"><span class="initialism">[CF]</span> <span>알뜰폰 전문기업 kt M mobile이 공식출범하였습니다.</span>
+                                <span class="date">2015. 05. 01</span>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-nav">
+                                <button type="button" class="btn btn-default btn-prev" aria-label="이전 게시물보기"></button>
+                                <button type="button" class="btn btn-default btn-next" aria-label="다음 게시물보기"></button>
+                            </div>
+
+                            <div>
+                                <div class="text-center">
+                                    <img src="./images/notice-view-thum.png" alt=""/>
+                                </div>
+                                <br/>
+                                <br/>
+                                kt의 MVNO(알뜰폰) 서비스를 더욱 향상화, 다양화,전문화하기 위하여 kt의 100%출자로 주식회사 케이티 엠모바일이
+                                2015년 5월 1일공식출범하였습니다. <br/>
+                                (주)케이티 엠모바일은 고객에게 다양한 서비스를 제공하는 알뜰폰 대표기업이 되기위해 노력하겠습니다.<br/><br/>
+
+                                kt의 MVNO(알뜰폰) 서비스를 더욱 향상화, 다양화,전문화하기 위하여 kt의 100%출자로 주식회사 케이티 엠모바일이
+                                2015년 5월 1일공식출범하였습니다.<br/>
+                                (주)케이티 엠모바일은 고객에게 다양한 서비스를 제공하는 알뜰폰 대표기업이 되기위해 노력하겠습니다.<br/>
+                            </div>
+                        </div>
+                        <div class="modal-footer sr-only sr-only-focusable">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">모달창닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <div id="press">
         <div class="container">
             <h1>보도자료</h1>
+
             <form class="form-inline">
 
                 <div class="table-header row">
-                    <div class="col-md-2"><span class="text-primary">총 10개</span></div>
-                    <div class="col-md-10 text-right hidden-xs">
+                    <div class="col-xs-3"><span class="text-primary">총 10개</span></div>
+                    <div class="col-xs-9 text-right form-inline">
                         <select name="" id="" class="form-control">
                             <option value="">제목</option>
                         </select>
 
-                        <div class="form-group">
-                            <label for="" class="sr-only">게시물검색</label>
-                            <input id="" type="text" class="form-control"/>
-                        </div>
+                        <label for="" class="sr-only">게시물검색</label>
+                        <input id="" type="text" class="form-control"/>
+
                         <button type="submit" class="btn btn-default">검색</button>
                     </div>
                 </div>
                 <table class="table table-hover">
                     <col width="10%"/>
                     <col/>
-                    <col width="10%"/>
-                    <col width="10%"/>
+                    <col width="12%"/>
+                    <col width="12%"/>
                     <thead>
                     <tr>
                         <th>번호</th>
@@ -269,7 +281,8 @@
 
                 <div class="table-footer">
                     <ul class="pagination">
-                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a></li>
+                        <li><a href="#" aria-label="맨처음"><span class="glyphicon first" aria-hidden="true"></span></a>
+                        </li>
                         <li><a href="#" aria-label="이전"><span class="glyphicon prev" aria-hidden="true"></span></a></li>
                         <li class="active"><a href="#">1 <span class="sr-only">현재활성화페이지</span></a></li>
                         <li><a href="#">2</a></li>
@@ -288,63 +301,84 @@
             </form>
         </div>
     </div>
-    <div id="movieClip">
-        <div class="container">
-            <h1>Movie Clip</h1>
-        </div>
-    </div>
-    <div id="advertising">
-        <div class="container">
-            <h1>광고/홍보물</h1>
 
-            <div class="row list">
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+
+    <div id="media">
+        <div class="container">
+            <h1>Media</h1>
+
+            <div class="row media">
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
-                </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
-                </div>
-                <div class="col-md-3 col-xs-4">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/advertising_thum_1.png" alt=""/>
-                    </a>
-                    <p>kt M Mobile 이벤트</p>
+                <div class="col-md-4 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="./images/media-thum.png" alt=""/>
+
+                        <div class="caption">
+                            <span class="category">[CF]</span>
+
+                            <h3>동영상 Title-통신비가 반값인데~!!!</h3>
+                            <span class="date">2015. 05. 01</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -366,7 +400,7 @@
                     <li><a href="#" aria-label="맨끝"><span class="glyphicon last" aria-hidden="true"></span></a></li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
 
