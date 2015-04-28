@@ -11,9 +11,9 @@
                     var offsetLeft = parseInt($(this).offset().left);
                     var subMenu = $(this).find('.dropdown-menu');
                     if(idx < 3) {
-                        subMenu.css({'padding-left': offsetLeft});
+                      subMenu.css({'padding-left': offsetLeft});
                     } else {
-                        subMenu.css({'padding-left': offsetLeft - 290});
+                      subMenu.css({'padding-left': offsetLeft - 290});
                     }
 
                 })
@@ -24,24 +24,24 @@
             $(window).on('resize',function(){
                 windowSize = $(window).width();
 
-                $('.dropdown').each(function (idx) {
-                    var offsetLeft = parseInt($(this).offset().left - 5);
-                    var subMenu = $(this).find('.dropdown-menu');
-                    // subMenu.css({'padding-left': offsetLeft});
+                    $('.dropdown').each(function (idx) {
+                        var offsetLeft = parseInt($(this).offset().left - 5);
+                        var subMenu = $(this).find('.dropdown-menu');
+                        // subMenu.css({'padding-left': offsetLeft});
 
-                    if(windowSize >= 768) {
-                        if(idx < 3) {
-                            subMenu.css({'padding-left': offsetLeft});
+                        if(windowSize >= 768) {
+                            if(idx < 3) {
+                              subMenu.css({'padding-left': offsetLeft});
+                            } else {
+                              subMenu.css({'padding-left': offsetLeft - 280});
+                            }
                         } else {
-                            subMenu.css({'padding-left': offsetLeft - 280});
+                            subMenu.css({'padding-left': 0})
                         }
-                    } else {
-                        subMenu.css({'padding-left': 0})
-                    }
 
-                })
+                    })
 
-            })
+              })
 
         })
 
@@ -87,3 +87,4 @@
 
     });
 })(jQuery);
+
