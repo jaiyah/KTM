@@ -5,6 +5,12 @@
         $.get("./header.html", function (data) {
             $("#header").html(data);
 
+            $('ul.nav li.dropdown').hover(function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+            }, function() {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+            });
+
             // 2depth Menu 초기 셋팅
             function adjustMenu() {
                 $('.dropdown').each(function (idx) {

@@ -1,7 +1,7 @@
 /*
- ------------------------------------------------------------------
-|   Nanum Gothic (Korean) http://www.google.com/fonts/earlyaccess  |
- ------------------------------------------------------------------
+ ----------------------------------------------------
+|                 font 나눔고딕 적용                    |
+ ----------------------------------------------------
 */
 
 @font-face {
@@ -128,8 +128,6 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
   .header, .marketing, .footer { padding-left: 0; padding-right: 0; }
   /* Space out the masthead */
   .header { margin-bottom: 30px; }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron { border-bottom: 0; }
   #header { padding-left: 30px; padding-right: 30px; }
   #header .container { width: 100%; margin: 0 auto;padding: 0; }
   #header .logo { width: 171px; height: 30px; margin-top: 40px; margin-bottom: 40px; }
@@ -202,7 +200,6 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
   #banner-wrap {background: #666;}
   #banner-wrap .main-banner { width: 1000px; margin: 0 auto;}
   #banner-wrap .vender img{ display: block;}
-  #banner-wrap .main-banner ul li {}
 }
 
 /*
@@ -211,7 +208,7 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
  ----------------------------------------------------
 */
 body > a.sr-only { background-color: #000; color: #fff; text-align: center; display: block; padding: 10px; }
-.sub-visual { border: 1px solid #ccc; border-width: 1px 0; height: 184px; background: #fff url(../images/sub-visual.png) 50% 0 no-repeat; }
+.sub-visual { border-bottom: 1px solid #ccc; height: 184px; background: #fff url(../images/sub-visual.png) 50% 0 no-repeat; }
 .sub-visual h3 { font-size: 3em; color: #000; padding-top: .5em; }
 .sub-visual p { font-size: 1.2em; }
 .table { border-top: 2px solid #d5001e; border-bottom: 1px solid #ddd; }
