@@ -10,7 +10,7 @@
                 $('.dropdown').each(function (idx) {
                     var offsetLeft = parseInt($(this).offset().left);
                     var subMenu = $(this).find('.dropdown-menu');
-                    if(idx < 3) {
+                    if (idx < 3) {
                         subMenu.css({'padding-left': offsetLeft});
                     } else {
                         subMenu.css({'padding-left': offsetLeft - 290});
@@ -18,10 +18,11 @@
 
                 })
             }
+
             adjustMenu();
 
             var windowSize = $(window).width();
-            $(window).on('resize',function(){
+            $(window).on('resize', function () {
                 windowSize = $(window).width();
 
                 $('.dropdown').each(function (idx) {
@@ -29,8 +30,8 @@
                     var subMenu = $(this).find('.dropdown-menu');
                     // subMenu.css({'padding-left': offsetLeft});
 
-                    if(windowSize >= 768) {
-                        if(idx < 3) {
+                    if (windowSize >= 768) {
+                        if (idx < 3) {
                             subMenu.css({'padding-left': offsetLeft});
                         } else {
                             subMenu.css({'padding-left': offsetLeft - 280});
@@ -49,6 +50,11 @@
         // footer include
         $.get("footer.html", function (data) {
             $("#footer").html(data);
+            // 패밀리 사이트
+            $('#footer select').change(function () {
+                var url = this.value;
+                window.open(url, '_blank');
+            });
         });
 
 
@@ -84,6 +90,7 @@
         }
 
         $('.sidebar').scrollAni();
+
 
     });
 })(jQuery);
