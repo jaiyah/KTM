@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         open: true,
-        livereload: 35729,
+        //livereload: 35729,
         // Change this to '0.0.0.0' to access the server from outside
         hostname: '192.168.0.5'
       },
@@ -134,7 +134,7 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
+        '<%= config.app %>/scripts/vendor/*',
         'test/spec/{,*/}*.js'
       ]
     },
@@ -315,16 +315,24 @@ module.exports = function (grunt) {
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
-        files: [{
+        files: [
+          { src:"bower_components/html5shiv/dist/html5shiv.min.js", dest:"dist/scripts/vendor/html5shiv.js" },
+          { src:"bower_components/respond/dest/respond.min.js", dest:"dist/scripts/vendor/respond.js" },
+          {
           expand: true,
           dot: true,
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
-            '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            '.htaccess',
+            'images/**/*.{png,jpg,jpeg,gif,webp}',
+            'styles/fonts/{,*/}*.*',
+            'styles/{,*/}*.css',
+            'font/{,*/}*.*',
+            'scripts/**/{,*/}*.*',
+            '*.html',
+            'bower_components/**/{,*/}*.*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -356,7 +364,7 @@ module.exports = function (grunt) {
           src: [
             '<%= config.dist %>/scripts/{,*/}*.js',
             '<%= config.dist %>/styles/{,*/}*.css',
-            '!<%= config.dist %>/scripts/vendor/*'
+            '<%= config.dist %>/scripts/vendor/*'
           ]
         },
         uglify: true
@@ -428,17 +436,17 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'cssmin',
-    //'uglify',
+    'uglify',
     'copy:dist',
     'modernizr',
     //'rev',
     'usemin',
-    'htmlmin'
+    //'htmlmin'
   ]);
 
   grunt.registerTask('default', [
     'newer:jshint',
-    'test',
+    //'test',
     'build'
   ]);
 };
