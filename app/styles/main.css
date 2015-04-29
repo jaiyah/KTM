@@ -135,7 +135,7 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
   /* dropdown menu redefine */
   .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus { font-weight: bold; color: red; background-color: transparent; }
   .navbar-nav { float: right; }
-  .dropdown-menu { position: fixed; top: 90px; min-width: 100%;border-radius:0; border-bottom: 1px solid #f27e83; box-shadow: 0 5px 5px rgba(0,0,0,.25);opacity: .8;  }
+  .dropdown-menu { position: fixed; top: 115px; min-width: 100%;border-radius:0; border-bottom: 1px solid #f27e83; box-shadow: 0 5px 5px rgba(0,0,0,.25);opacity: .8;  }
   .dropdown-menu li { float: left; margin: 10px 0 10px 20px; }
   .dropdown-menu > li > a {padding: 3px 10px 3px 10px;  }
   .dropdown-menu > li:first-child > a { padding-right: 0;}
@@ -166,6 +166,7 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
   #header .navbar-nav { margin-top: 23px; margin-bottom: 10px; }
   #header .navbar-nav > li > a { margin-right: 65px; }
   #header .navbar-nav > li.last > a { margin-right: 47px; }
+    .dropdown-menu { position: fixed; top: 90px; }
   #m_visual { padding-right: 30px; }
   #m_visual .visual { padding-left: 0; }
 }

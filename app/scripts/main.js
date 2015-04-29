@@ -5,29 +5,7 @@
         $.get("./header.html", function (data) {
             $("#header").html(data);
             var windowSize = $(window).width();
-            $(window).on('resize',function(){
-                windowSize = $(window).width();
-                if( windowSize >= 768 ) {
-                    dropdownHover();
-                } else {
-                    $('ul.nav li.dropdown').off('mouseenter mouseleave');
-                }
-            })
 
-            function dropdownHover() {
-            $('ul.nav li.dropdown').hover(function() {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
-                    var offsetLeft = parseInt($(this).offset().left);
-                    var subMenu = $(this).find('.dropdown-menu');
-                    subMenu.css({'padding-left': offsetLeft});
-                    if(subMenu.closest('.dropdown').hasClass('last')) {
-                        subMenu.css({'padding-left': offsetLeft - 150});
-                    }
-            }, function() {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
-            });
-            }
-            dropdownHover();
 
             // 2depth Menu 초기 셋팅
             function adjustMenu() {
@@ -45,11 +23,12 @@
 
             adjustMenu();
 
+
             $(window).on('resize', function () {
                 windowSize = $(window).width();
 
                 $('.dropdown').each(function (idx) {
-                    var offsetLeft = parseInt($(this).offset().left - 5);
+                    var offsetLeft = parseInt($(this).offset().left);
                     var subMenu = $(this).find('.dropdown-menu');
                     // subMenu.css({'padding-left': offsetLeft});
 
