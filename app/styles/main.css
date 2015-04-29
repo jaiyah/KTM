@@ -396,6 +396,17 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
     #media .media .thumbnail { margin-bottom: 10px; }
 }
 
+/*
+ ----------------------------------------------------
+|                      고객센터                        |
+ ----------------------------------------------------
+*/
+/*개인정보취급방침*/
+.policy #body h3{ background: url(../images/ico-h3.png) 0 0 no-repeat; font-size: 1.3em; padding-left: 1.4em; margin-top: 2.4em; margin-bottom: 1.4em;}
+.policy #body h4{ font-size: 1.1em; color: #000; margin-top: 2em;}
+
+
+
 
 /* Responsive: Portrait mobile 및 768px 보다 작은 기기 */
 @media (max-width: 767px) {
