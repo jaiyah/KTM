@@ -153,7 +153,6 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
   #main-list p a { display: inline-block; margin-top: 25px; }
   #main-list p a img { display: block; width: 100%; height: auto; }
   #main-list .mobile-list { display: none;}
-
 }
 
 /*
@@ -163,7 +162,7 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
 */
 @media screen and (min-width: 992px) {
   body { margin-top: 91px }
-  #header .container, .container, #m_visual .container { width: 1000px; margin: 0 auto; }
+  #header .container, #m_visual .container, .container { width: 1000px !important; margin: 0 auto; }
   #header .logo { width: 201px; height: 37px; margin: 24px 105px 24px 0; }
   #header .navbar-nav { margin-top: 23px; margin-bottom: 10px; }
   #header .navbar-nav > li > a { margin-right: 65px; }
@@ -234,7 +233,7 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 |                      sidebar                       |
  ----------------------------------------------------
 */
-.sidebar { position: fixed; width: 200px; z-index: 100; left: 50%; margin-top: 240px; margin-left: 580px; }
+.sidebar { position: fixed; width: 200px; z-index: 100; left: 50%; margin-top: 100px; margin-left: 580px; }
 .sidebar li { list-style-type: none; }
 .sidebar li span { width: 15px; height: 15px; border-radius: 50%; border: 2px solid transparent; background-color: #bfbfbf; display: inline-block; }
 .sidebar li.active span { border-color: #e60617; background-color: transparent; }
@@ -403,11 +402,8 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
  ----------------------------------------------------
 */
 /*개인정보취급방침*/
-.policy #body h3{ background: url(../images/ico-h3.png) 0 0 no-repeat; font-size: 1.3em; padding-left: 1.4em; margin-top: 2.4em; margin-bottom: 1.4em;}
+.policy #body h3{ background: url(../images/ico-h3.png) 0 2px no-repeat; font-size: 1.3em; padding-left: 1.4em; margin-top: 2.4em; margin-bottom: 1.4em;}
 .policy #body h4{ font-size: 1.1em; color: #000; margin-top: 2em;}
-
-
-
 
 /* Responsive: Portrait mobile 및 768px 보다 작은 기기 */
 @media (max-width: 767px) {
