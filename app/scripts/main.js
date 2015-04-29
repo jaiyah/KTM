@@ -4,10 +4,10 @@
         // header include
         $.get("./header.html", function (data) {
             $("#header").html(data);
-
-            $('ul.nav li.dropdown').hover(function () {
+            var windowSize = $(window).width();
+            $('ul.nav li.dropdown').hover(function() {
                 $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
-            }, function () {
+            }, function() {
                 $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
             });
 
@@ -27,7 +27,6 @@
 
             adjustMenu();
 
-            var windowSize = $(window).width();
             $(window).on('resize', function () {
                 windowSize = $(window).width();
 
@@ -40,7 +39,7 @@
                         if (idx < 3) {
                             subMenu.css({'padding-left': offsetLeft});
                         } else {
-                            subMenu.css({'padding-left': offsetLeft - 280});
+                            subMenu.css({'padding-left': offsetLeft - 150});
                         }
                     } else {
                         subMenu.css({'padding-left': 0})
