@@ -50,7 +50,6 @@ body { margin-top: 45px; color: #535353; font-family: 나눔고딕, 'Nanum Gothi
     #footer address span { display: inline-block;}
     #footer .family { position: absolute; right: 0; top: -3em; margin-right: 0; }
 }
-/* Responsive: Portrait mobile 및 768px 보다 작은 기기들은 미디어 쿼리 없이 모바일 기준 */
 
 /*
  --------------------------------------------------------------------------------------------------
