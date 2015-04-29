@@ -228,6 +228,7 @@ body > a.sr-only { background-color: #000; color: #fff; text-align: center; disp
 .glyphicon.next { background: url(../images/ico-next.png) 3px 0 no-repeat; width: 10px; height: 10px; }
 .glyphicon.bus { background: url(../images/ico-bus.png) 3px 0 no-repeat; padding-left: 2.6em; padding-top: .1em; padding-bottom: .8em; }
 .glyphicon.subway { background: url(../images/ico-subway.png) 3px 0 no-repeat; padding-left: 2.6em; padding-top: .1em; padding-bottom: 1em; }
+.is-ie select { padding-right: 0; padding-top: 0; padding-bottom: 0;}
 /*
  ----------------------------------------------------
 |                      sidebar                       |
