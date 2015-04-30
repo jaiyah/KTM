@@ -4,12 +4,8 @@
         // header include
         $.get("./header.html", function (data) {
             $("#header").html(data);
+            var windowSize = $(window).width();
 
-            $('ul.nav li.dropdown').hover(function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
-            }, function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
-            });
 
             // 2depth Menu 초기 셋팅
             function adjustMenu() {
@@ -19,7 +15,7 @@
                     if (idx < 3) {
                         subMenu.css({'padding-left': offsetLeft});
                     } else {
-                        subMenu.css({'padding-left': offsetLeft - 290});
+                        subMenu.css({'padding-left': offsetLeft - 150});
                     }
 
                 })
@@ -27,12 +23,12 @@
 
             adjustMenu();
 
-            var windowSize = $(window).width();
+
             $(window).on('resize', function () {
                 windowSize = $(window).width();
 
                 $('.dropdown').each(function (idx) {
-                    var offsetLeft = parseInt($(this).offset().left - 5);
+                    var offsetLeft = parseInt($(this).offset().left);
                     var subMenu = $(this).find('.dropdown-menu');
                     // subMenu.css({'padding-left': offsetLeft});
 
@@ -40,7 +36,7 @@
                         if (idx < 3) {
                             subMenu.css({'padding-left': offsetLeft});
                         } else {
-                            subMenu.css({'padding-left': offsetLeft - 280});
+                            subMenu.css({'padding-left': offsetLeft - 150});
                         }
                     } else {
                         subMenu.css({'padding-left': 0})
@@ -114,6 +110,30 @@
             }
             document.getElementsByTagName('html')[0].className += classNames;
         }
+
+        // sub banner-list
+        var bannerBtn = $('.banner-btn a');
+        bannerBtn.on({
+            'click' : function() {
+                $('#banner-wrap').stop().animate({
+                    height: 'toggle'
+                },300);
+                $(this).toggleClass('open');
+
+            }
+        })
+
+
+        // bxSlider-plugIn
+
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: true,
+            responsive : true,
+            touchEnabled : true,
+            easing : 'ease-out',
+            pause : 3000
+        });
 
 
     });
