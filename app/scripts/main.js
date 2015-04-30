@@ -111,6 +111,30 @@
             document.getElementsByTagName('html')[0].className += classNames;
         }
 
+        // sub banner-list
+        var bannerBtn = $('.banner-btn a');
+        bannerBtn.on({
+            'click' : function() {
+                $('#banner-wrap').stop().animate({
+                    height: 'toggle'
+                },300);
+                $(this).toggleClass('open');
+
+            }
+        })
+
+
+        // bxSlider-plugIn
+
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: true,
+            responsive : true,
+            touchEnabled : true,
+            easing : 'ease-out',
+            pause : 3000
+        });
+
 
     });
 })(jQuery);
