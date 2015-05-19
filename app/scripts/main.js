@@ -40,7 +40,7 @@
 
 
 		// matchMedia를 이용한 반응형 이미지와 백그라운드 처리
-		// ex) <img class="response" src="./images/logo.png" data-media-tablet="./images/main_visual_02.jpg" data-media-mobile="./images/main_visual_03.jpg" alt="KT M mobile"/>
+		// ex) <img class="response" src="./images/logo.png" data-srcset-tablet="./images/main_visual_02.jpg" data-srcset-mobile="./images/main_visual_03.jpg" alt="KT M mobile"/>
 		var getDevice = function () {
 
 			var $response = $('.response');
@@ -48,8 +48,8 @@
 			var imgSrc = $response.map(function () {
 
 				var tag = this.tagName;
-				var mobile = $(this).data("media-mobile");
-				var tablet = $(this).data("media-tablet");
+				var mobile = $(this).data("srcset-mobile");
+				var tablet = $(this).data("srcset-tablet");
 
 				if (mobile || tablet) {
 					if (tag === 'IMG') {
@@ -82,8 +82,7 @@
 							mobile: 767,
 							desktop: 979
 						};
-
-						var deviceChangeIE8 =(function() {
+						function deviceChangeIE8() {
 							if ($(window).width() <= matchmedia.mobile) {
 								device = 'mobile';
 							} else if ($(window).width() > matchmedia.mobile && $(window).width() <= matchmedia.desktop) {
@@ -91,14 +90,9 @@
 							} else {
 								device = 'desktop';
 							}
-						}());
+						};
+						deviceChangeIE8();
 						imgChange();
-						$(window).resize(function () {
-							deviceChangeIE8;
-							imgChange();
-						});
-
-						console.log(device)
 					}
 				} else {
 					keyword = window.matchMedia;
@@ -122,16 +116,16 @@
 					$response.each(function (i) {
 
 						var tag = this.tagName;
-						var mobile = $(this).data("media-mobile");
-						var tablet = $(this).data("media-tablet");
+						var mobile = $(this).data("srcset-mobile");
+						var tablet = $(this).data("srcset-tablet");
 
 						if (tag === 'IMG') { // 이미지일 때
 							var defaultImg = $(this).attr('src', imgSrc[i]);
 							if (device !== 'desktop') {
 								if (device === 'mobile') {
-									mobile ? $(this).attr('src', $(this).attr('data-media-' + device)) : defaultImg;
+									mobile ? $(this).attr('src', $(this).attr('data-srcset-' + device)) : defaultImg;
 								} else {
-									tablet ? $(this).attr('src', $(this).attr('data-media-' + device)) : defaultImg;
+									tablet ? $(this).attr('src', $(this).attr('data-srcset-' + device)) : defaultImg;
 								}
 							} else {
 								defaultImg;
@@ -140,9 +134,9 @@
 							var defaultImg = $(this).css('background-image', imgSrc[i]);
 							if (device !== 'desktop') {
 								if (device === 'mobile') {
-									mobile ? $(this).css('background-image', 'url(' + $(this).attr('data-media-' + device) + ')') : defaultImg;
+									mobile ? $(this).css('background-image', 'url(' + $(this).attr('data-srcset-' + device) + ')') : defaultImg;
 								} else {
-									tablet ? $(this).css('background-image', 'url(' + $(this).attr('data-media-' + device) + ')') : defaultImg;
+									tablet ? $(this).css('background-image', 'url(' + $(this).attr('data-srcset-' + device) + ')') : defaultImg;
 								}
 							} else {
 								defaultImg;
@@ -150,12 +144,14 @@
 						}
 					});
 				};
+				console.log(device, $(window).width());
 			};
 
 			setDevice();
 
-			$(window).resize(function () {
-				setDevice();
+			var url = "bower_components/jquery-throttle-debounce/jquery.ba-throttle-debounce.js";
+			$.getScript(url, function () {
+				$(window).resize($.throttle(400, setDevice));
 			});
 
 		};
